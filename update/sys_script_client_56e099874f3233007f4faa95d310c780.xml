@@ -3,35 +3,42 @@
         <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description>Alert for who requested</description>
-        <field>short_description</field>
+        <description>Use the GetEmail Address Script Include to retrieve the Requested for's email address from the database when the Requested for value changes.</description>
+        <field>u_requested_for</field>
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Needit Requested for</name>
+        <name>Needit Populate Email Field</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
-	if(isLoading || newValue === ''){
+	if (isLoading || newValue === '' || newValue == oldValue) {
 		return;
 	}
+	var getEmailAddr = new GlideAjax("GetEmailAddress");
+	getEmailAddr.addParam("sysparm_name", "getEmail");
+	getEmailAddr.addParam("sysparm_userID", g_form.getValue("u_requested_for"));
+	getEmailAddr.getXML(populateEmailField);
 	
-	alert("Novo valor digitado!");
+	function populateEmailField(response){
+		var emailFromScriptInclude = response.responseXML.documentElement.getAttribute("answer");
+		g_form.setValue("u_requested_for_email", emailFromScriptInclude);
+	}
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2019-07-23 11:41:56</sys_created_on>
+        <sys_created_on>2019-07-26 21:22:21</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>3dc03bb94f3233007f4faa95d310c7a8</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Needit Requested for</sys_name>
+        <sys_id>56e099874f3233007f4faa95d310c780</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Needit Populate Email Field</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_308284_needit">ce88aa654f3233007f4faa95d310c71d</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">ce88aa654f3233007f4faa95d310c71d</sys_scope>
-        <sys_update_name>sys_script_client_3dc03bb94f3233007f4faa95d310c7a8</sys_update_name>
+        <sys_update_name>sys_script_client_56e099874f3233007f4faa95d310c780</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-07-23 11:46:10</sys_updated_on>
+        <sys_updated_on>2019-07-26 21:51:47</sys_updated_on>
         <table>x_308284_needit_needit</table>
         <type>onChange</type>
         <ui_type>0</ui_type>
