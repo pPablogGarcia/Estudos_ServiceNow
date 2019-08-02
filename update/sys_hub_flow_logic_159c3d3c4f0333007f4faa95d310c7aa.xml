@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_flow_logic">
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">599c3d3c4f0333007f4faa95d310c7a8</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <flow display_value="Needit Fulfillment">c043b9344f0333007f4faa95d310c72b</flow>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-01 10:55:25</sys_created_on>
+        <sys_id>159c3d3c4f0333007f4faa95d310c7aa</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NeedIt" source="x_308284_needit">ce88aa654f3233007f4faa95d310c71d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">ce88aa654f3233007f4faa95d310c71d</sys_scope>
+        <sys_update_name>sys_hub_flow_logic_159c3d3c4f0333007f4faa95d310c7aa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-01 12:01:26</sys_updated_on>
+        <ui_id>7fd89245-69c5-4f82-9d97-ecc2f8aabb24</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=159c3d3c4f0333007f4faa95d310c7aa"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>159c3d3c4f0333007f4faa95d310c7aa</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-01 10:55:25</sys_created_on>
+        <sys_id>519c3d3c4f0333007f4faa95d310c7bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-01 10:55:25</sys_updated_on>
+        <value>Request approved</value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>159c3d3c4f0333007f4faa95d310c7aa</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-01 10:55:25</sys_created_on>
+        <sys_id>999c3d3c4f0333007f4faa95d310c7bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-01 10:55:25</sys_updated_on>
+        <value>{{2201d106-65c9-420f-851c-c0fad691d15a.approval_state}}=approved</value>
+        <variable display_value="">9a5f5105c32632002841b63b12d3ae46</variable>
+    </sys_variable_value>
+</record_update>
